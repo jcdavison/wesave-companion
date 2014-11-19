@@ -7,7 +7,10 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "body-parser": "^1.9.2",
+    "express": "~4.9.x",
+    "mongodb": "1.4.10",
+    "mongojs": "^0.17.0"
   },
   "engines": {
     "node": "0.10.x"
@@ -23,4 +26,3 @@
   ],
   "license": "MIT"
 }
-
