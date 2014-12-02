@@ -24,6 +24,10 @@ app.post '/transactions', (req, resp) ->
   resp.status = 200
   resp.send 'ok'
 
+app.get '/transactions', (request, response) ->
+  transactions.find (error, docs) =>
+    response.send docs: docs
+
 createTransaction = (transaction, user) ->
   transactions.insert transaction, (err, doc) =>
     return err if err

@@ -48,6 +48,15 @@
     return resp.send('ok');
   });
 
+  app.get('/transactions', function(request, response) {
+    var _this = this;
+    return transactions.find(function(error, docs) {
+      return response.send({
+        docs: docs
+      });
+    });
+  });
+
   createTransaction = function(transaction, user) {
     var _this = this;
     return transactions.insert(transaction, function(err, doc) {
